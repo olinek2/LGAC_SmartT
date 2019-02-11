@@ -2,7 +2,7 @@
 *This plugin uses the [wideq](https://github.com/sampsyo/wideq) modified library.*
 *This plugin contains some modified functions from the [domoticz-mirobot-plugin](https://github.com/mrin/domoticz-mirobot-plugin) library.*
 *This plugin contains some modified functions from the  [domoticz_daikin_BRP069A42](https://github.com/leejoow/domoticz_daikin_BRP069A42) library.*
-LG AC Smarthinq Unit control for Domoticz
+LG AC Smarthing Unit control for Domoticz
 
 
 Before installation plugin check the `python3`, `python3-dev`, `pip3` is installed for Domoticz plugin system:
@@ -63,7 +63,7 @@ DATE_FORMAT = '%a, %d %b %Y %H:%M:%S +0000'
 To do that just open it in nano and save (Ctrl+X. yes and enter):
 ```nano wideq.py```
 
-Authenticate with the SmartThinQ service to get a refresh token by running the WideQ example script.Run this in the `wideq` directory:
+Authenticate with the SmartThing service to get a refresh token by running the WideQ example script.Run this in the `wideq` directory:
 
 ```python3 example.py```
 
@@ -101,7 +101,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/pi/LGACSmartThinq/LGACServerNew.py
+ExecStart=/usr/bin/python3 /home/pi/LGAC_SmartT/LGACServerNew.py
 Restart=on-abort
 
 [Install]
