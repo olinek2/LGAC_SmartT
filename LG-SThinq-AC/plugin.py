@@ -3,7 +3,7 @@
 #       Author: olinek2, 2018
 #       
 """
-<plugin key="LG-SmartThinq-AC" name="LG AC SmartThinq" author="olinek2" version="0.1.0" wikilink="https://github.com/mrin/domoticz-mirobot-plugin">
+<plugin key="LG-SmartThinq-AC" name="LG AC SmartThinq" author="olinek2" version="0.1.0" wikilink="https://github.com/olinek2/LGAC_SmartT">
     <description>
         LG AC SmartThinq Plugin
     </description>

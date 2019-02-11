@@ -21,10 +21,10 @@ Install all necessary libraries for LGACServer.py:
 
 ```sudo pip3 install gevent msgpack-python greenlet```.
 
-Install [WideQ] by typing something like:
+Install [LGAC_SmartT] by typing something like:
 ```
-$ git clone https://github.com/sampsyo/wideq.git
-$ cd wideq
+$ git clone https://github.com/olinek2/LGAC_SmartT
+$ cd LGAC_SmartT
 $ sudo pip3 install -e .
 ```
 
@@ -75,16 +75,23 @@ We also need an AC Device Number. To obtain it run:
 
 ```python3 example.py ls```
 
+Device number looks like that:
+```"????????-????-????-????-????????????": KLIMATYZATOR (AC Rxxx_xxx_xx)```
+
+
 After obtaining this two values just put them inside LGACServerNew.py file at default parser arguments.
 ```
 parser.add_argument('--acDevNum', type=str, help='AC Device Number', default='copied dev num')
 parser.add_argument('--token', type=str, help='Refresh Token', default='copied token')
 ```
 
+Make it executable:
+```sudo chmod +x LGACServerNew.py```
+
 To check if the server is operating properly type:
 ```./LGACServerNew.py```.
 
-It will start operation. Open another terminal window, log in, navigate to 'wideq' folder ```cd wideq/``` and run testServer.py file:
+It will start operation. Open another terminal window, log in, navigate to 'LGAC_SmartT' folder ```cd LGAC_SmartT``` and run testServer.py file:
 
 ```sudo python3 testServer.py```. 
 
@@ -130,3 +137,12 @@ Status should look like this:
 Jun 19 08:15:57 raspberrypi systemd[1]: Started LG AC Device Server.
 Jun 19 08:15:59 raspberrypi python3[9288]: server: Starting server on 127.0.0.1 22233
 ```
+
+Copy plugin to domoticz plugins folder and restart domoticz. Add hardware from list after restart and check if it is operating:
+``` 
+cp -Rf LG-SThinq-AC ~/domoticz/plugins/LG-SThinq-AC 
+sudo service domoticz restart
+```
+
+
+
