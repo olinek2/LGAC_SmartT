@@ -144,5 +144,7 @@ cp -Rf LG-SThinq-AC ~/domoticz/plugins/LG-SThinq-AC
 sudo service domoticz restart
 ```
 
+![Hardware](https://github.com/olinek2/LGAC_SmartT/blob/master/Hardware.PNG)
 
+![Controls](https://github.com/olinek2/LGAC_SmartT/blob/master/Controls.PNG)
 
